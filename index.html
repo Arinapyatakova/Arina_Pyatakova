@@ -104,6 +104,28 @@
 						<h2>Say Hello.</h2>
 						<p>Если что- пиши</p>
 					</header>
+					<html>
+					<head>
+					    <title>Contact Form</title>
+					    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+					    <script type="text/javascript">
+					        (function(){
+					           emailjs.init("<user_4GZC9CEb12VJ4rvLRkj9N>");
+					        })();
+					    </script>
+					    <script type="text/javascript">
+					        window.onload = function() {
+					            document.getElementById('contact-form').addEventListener('submit', function(event) {
+					                event.preventDefault();
+					                this.contact_number.value = Math.random() * 100000 | 0;
+					                emailjs.sendForm('gmail', 'vech', this);
+					            });
+					        }
+					    </script>
+					</head>
+					<body>
+
+
 					<div class="box">
 						<form method="post" action="#">
 							<div class="fields">
